@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">文本识别系统</string>
+    <string name="take_picture_hint">请横屏拍照\n文字尽量与参考线对齐</string>
+    <string name="album">相册</string>
+    <string name="original_picture">原图片</string>
+    <string name="gray_scale">灰度图</string>
+</resources>
