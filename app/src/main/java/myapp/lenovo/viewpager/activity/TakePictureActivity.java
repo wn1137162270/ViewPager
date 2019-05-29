@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.activity;
 
 
 import android.animation.ObjectAnimator;
@@ -36,8 +36,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import myapp.lenovo.viewpager.camera.CameraPreview;
-import myapp.lenovo.viewpager.camera.FocusView;
+import myapp.lenovo.viewpager.R;
+import myapp.lenovo.viewpager.view.CameraPreview;
+import myapp.lenovo.viewpager.view.FocusView;
 import myapp.lenovo.viewpager.utils.Utils;
 
 public class TakePictureActivity extends AppCompatActivity implements CameraPreview.OnCameraStatusListener, SensorEventListener{
@@ -271,7 +272,9 @@ public class TakePictureActivity extends AppCompatActivity implements CameraPrev
         values.put(MediaStore.Images.Media.DATE_TAKEN, time);
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
         values.put(MediaStore.Images.Media.DATA, filePath);
-        return getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Uri uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Log.e(TAG, time + "--" +fileName + "--" +String.valueOf(uri));
+        return uri;
     }
 }
 

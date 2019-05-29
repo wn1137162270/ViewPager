@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.fragment;
 
 
 import android.Manifest;
@@ -23,8 +23,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +35,9 @@ import android.widget.Toast;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.io.IOException;
+
+import myapp.lenovo.viewpager.R;
+import myapp.lenovo.viewpager.activity.TakePictureActivity;
 
 
 /**
@@ -202,6 +203,13 @@ public class MyOcrFragment extends Fragment {
 
     public interface OcrContent{
         void getOcrContent(Uri uri,String html);
+    }
+
+    public class MyThread extends Thread{
+        @Override
+        public void run() {
+            super.run();
+        }
     }
 
 }

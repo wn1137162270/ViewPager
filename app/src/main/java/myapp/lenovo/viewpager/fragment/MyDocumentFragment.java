@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.fragment;
 
 
 import android.database.Cursor;
@@ -12,9 +12,6 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -40,12 +37,21 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadFileListener;
+import myapp.lenovo.viewpager.entity.ChildItem;
+import myapp.lenovo.viewpager.adapter.MyBaseExpandableListAdapter;
+import myapp.lenovo.viewpager.dialog.MyDialogAddEdit;
+import myapp.lenovo.viewpager.dialog.MyDialogChoose;
+import myapp.lenovo.viewpager.dialog.MyDialogDelete;
+import myapp.lenovo.viewpager.dialog.MyDialogRecognize;
+import myapp.lenovo.viewpager.entity.MyUser;
+import myapp.lenovo.viewpager.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MyDocumentFragment extends Fragment {
+    private static final String TAG = "MyDocumentFragment";
 
     private static List<String> groupName;
     private static Map<String, List<String>> childName;
@@ -101,16 +107,25 @@ public class MyDocumentFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        Log.d(TAG, "setUserVisibleHint");
+        if (isVisibleToUser){
+            ela.notifyDataSetChanged();
+        }
+        super.setUserVisibleHint(isVisibleToUser);
+    }
+
     private void initDataFirst() {
 
         groupName = new ArrayList<>();
         childName = new HashMap<>();
         childDrawable=new HashMap<>();
 
-        groupName.add("我的文档");
         groupName.add("未归档");
         groupName.add("文件");
         groupName.add("备忘录");
+        groupName.add("笔记");
         groupName.add("名片");
         groupName.add("证件");
 
@@ -149,7 +164,7 @@ public class MyDocumentFragment extends Fragment {
     }
 
     public void getOcrContent(Uri uri,String html){
-        addChild(uri,html,1);
+        addChild(uri,html,0);
     }
 
     private void setListener() {
@@ -226,10 +241,9 @@ public class MyDocumentFragment extends Fragment {
         String gn = groupName.get(i);
         List<String> cn = childName.get(gn);
         List<Uri> cd=childDrawable.get(gn);
-        Log.d("addChild",String.valueOf(uri));
         cn.add(newChildName);
         cd.add(uri);
-        String path=getImagePath(uri);
+        //String path=getImagePath(uri);
         //addBmobChildName(path,newChildName,i);
         //ela.notifyDataSetChanged();
     }

@@ -1,12 +1,13 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import myapp.lenovo.viewpager.R;
 
 /**
  * Created by Lenovo on 2016/11/8.
@@ -20,7 +21,7 @@ public class MyDialogAddEdit extends Dialog{
     private LayoutInflater inflater;
 
     public MyDialogAddEdit(Context context, String title, String content){
-        super(context,R.style.MyDialog);
+        super(context, R.style.MyDialog);
 
         inflater=LayoutInflater.from(getContext());
         View view=inflater.inflate(R.layout.edit_add_dialog_my,null);
@@ -47,3 +48,5 @@ public class MyDialogAddEdit extends Dialog{
         dialogCancel.setOnClickListener(listener);
     }
 }
+
+

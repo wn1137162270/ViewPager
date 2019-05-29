@@ -4,7 +4,7 @@
     android:id="@+id/activity_me_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="myapp.lenovo.viewpager.MeFragmentActivity">
+    tools:context="myapp.lenovo.viewpager.activity.MeFragmentActivity">
 
     <RelativeLayout
         android:id="@+id/title_layout"

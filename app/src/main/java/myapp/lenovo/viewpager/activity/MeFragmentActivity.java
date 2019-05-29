@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
+import myapp.lenovo.viewpager.adapter.MeBaseExpandableListAdapter;
+import myapp.lenovo.viewpager.R;
 
 public class MeFragmentActivity extends Activity {
     private ExpandableListView elv;

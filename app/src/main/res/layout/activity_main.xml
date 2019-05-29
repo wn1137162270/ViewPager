@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="myapp.lenovo.viewpager.MainActivity">
+    tools:context="myapp.lenovo.viewpager.activity.MainActivity">
 
     <RadioGroup
         android:id="@+id/radio_group"

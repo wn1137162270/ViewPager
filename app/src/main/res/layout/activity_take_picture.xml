@@ -9,18 +9,18 @@
         android:layout_height="match_parent"
         android:visibility="visible">
 
-        <myapp.lenovo.viewpager.camera.CameraPreview
+        <myapp.lenovo.viewpager.view.CameraPreview
             android:id="@+id/camera_preview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <myapp.lenovo.viewpager.camera.FocusView
+        <myapp.lenovo.viewpager.view.FocusView
             android:id="@+id/focus_view"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerInParent="true"/>
 
-        <myapp.lenovo.viewpager.camera.ReferenceLine
+        <myapp.lenovo.viewpager.view.ReferenceLine
             android:id="@+id/reference_line"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

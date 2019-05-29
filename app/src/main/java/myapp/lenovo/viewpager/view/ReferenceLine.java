@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager.camera;
+package myapp.lenovo.viewpager.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

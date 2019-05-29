@@ -3,7 +3,7 @@
     android:id="@+id/my_document_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="myapp.lenovo.viewpager.MyDocumentFragment">
+    tools:context="myapp.lenovo.viewpager.fragment.MyDocumentFragment">
 
     <RelativeLayout
         android:id="@+id/title_layout"

@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.fragment;
 
 
 import android.content.Intent;
@@ -26,8 +26,11 @@ import java.util.List;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
-
-import static android.app.Activity.RESULT_OK;
+import myapp.lenovo.viewpager.adapter.MeBaseExpandableListAdapter;
+import myapp.lenovo.viewpager.entity.MyUser;
+import myapp.lenovo.viewpager.R;
+import myapp.lenovo.viewpager.activity.LoginActivity;
+import myapp.lenovo.viewpager.activity.UpdatePasswordActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,7 +57,8 @@ public class MyMeFragment extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BmobUser.logOut();
+                if (BmobUser.getCurrentUser() != null)
+                    BmobUser.logOut();
                 Intent intent=new Intent(getActivity(),LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();

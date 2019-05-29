@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.activity;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -16,8 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
+import myapp.lenovo.viewpager.fragment.MyDocumentFragment;
+import myapp.lenovo.viewpager.adapter.MyFragmentPagerAdapter;
+import myapp.lenovo.viewpager.fragment.MyMeFragment;
+import myapp.lenovo.viewpager.fragment.MyOcrFragment;
+import myapp.lenovo.viewpager.R;
 
-public class MainActivity extends AppCompatActivity implements MyOcrFragment.OcrContent{
+public class MainActivity extends AppCompatActivity implements MyOcrFragment.OcrContent {
     private ViewPager viewPager;
     private RadioGroup radioGroup;
     private RadioButton ocr,document,me;

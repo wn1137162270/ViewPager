@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,6 +21,8 @@ import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
+import myapp.lenovo.viewpager.entity.MyUser;
+import myapp.lenovo.viewpager.R;
 
 public class UpdatePasswordActivity extends Activity {
     private EditText firstWord;

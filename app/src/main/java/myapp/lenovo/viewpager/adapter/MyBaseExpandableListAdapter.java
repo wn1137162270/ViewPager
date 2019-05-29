@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -24,7 +24,15 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.Map;
 
-import static myapp.lenovo.viewpager.MyDocumentFragment.deleteBmobChildName;
+import myapp.lenovo.viewpager.dialog.MyDialogAddEdit;
+import myapp.lenovo.viewpager.dialog.MyDialogChoose;
+import myapp.lenovo.viewpager.dialog.MyDialogDelete;
+import myapp.lenovo.viewpager.dialog.MyDialogDrawable;
+import myapp.lenovo.viewpager.dialog.MyDialogRecognize;
+import myapp.lenovo.viewpager.R;
+import myapp.lenovo.viewpager.fragment.MyDocumentFragment;
+
+import static myapp.lenovo.viewpager.fragment.MyDocumentFragment.deleteBmobChildName;
 
 /**
  * Created by Lenovo on 2016/11/6.

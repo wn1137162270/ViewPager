@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager;
+package myapp.lenovo.viewpager.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
+import myapp.lenovo.viewpager.R;
 
 /**
  * Created by Lenovo on 2016/11/25.

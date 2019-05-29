@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager.camera;
+package myapp.lenovo.viewpager.view;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
@@ -315,7 +315,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     public void takePicture(){
         if (camera != null){
             try {
-                camera.takePicture(null, null, new Camera.PictureCallback() {
+                camera.takePicture(null, null,  new Camera.PictureCallback() {
                     @Override
                     public void onPictureTaken(byte[] bytes, Camera camera) {
                         try {

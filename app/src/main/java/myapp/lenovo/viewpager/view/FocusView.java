@@ -1,4 +1,4 @@
-package myapp.lenovo.viewpager.camera;
+package myapp.lenovo.viewpager.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
